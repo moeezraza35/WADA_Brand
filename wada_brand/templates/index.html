@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/light.css" id="theme">
+    <title>WADA Brand</title>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg shadow-sm">
+        <nav class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/static/logo.png" alt="logo" class="brand-logo">
+                Brand
+            </a>
+            <div class="d-flex align-item-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button class="navbar-toggler" type="button" onclick="show_and_hide_aside()">
+                    <i class='bx bxs-filter-alt'></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-warning" type="submit">
+                        <i class='bx bx-search-alt-2 mt-2'></i>
+                    </button>
+                </form>
+                <ul class="nav navbar-nav with-text">
+                    <li class="nav-item" title="Home">
+                        <a class="nav-link active" href="#">
+                            <i class='bx bxs-home'></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item" title="About">
+                        <a class="nav-link" href="#">
+                            <i class='bx bxs-help-circle'></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item" title="Messages">
+                        <a class="nav-link" href="#">
+                            <i class='bx bxs-message-dots'></i>
+                            Messages
+                        </a>
+                    </li>
+                    <li class="nav-item" title="My Shop">
+                        <a class="nav-link" href="#">
+                            <i class='bx bxs-store-alt'></i>
+                            My shop
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav without-text">
+                    <li class="nav-item" title="Theme">
+                        <a class="nav-link" onclick="toggleTheme()">
+                            <i class='bx bxs-brightness-half'></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" title="Notification">
+                        <button class="nav-link btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <i class='bx bxs-bell'></i>
+                        </button>
+                    </li>
+                    <li class="nav-item dropdown" title="Profile">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class='bx bxs-user'></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">
+                                <i class='bx bxs-user text-secondary'></i>
+                                Profile
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class='bx bxs-cog text-secondary'></i>
+                                Settings
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class='bx bxs-log-out text-secondary'></i>
+                                Logout
+                            </a></li>
+                            <li><hr class="dropdown-divider" style="border-color: red;"></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class='bx bxs-log-in text-secondary'></i>
+                                Login
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class='bx bxs-message-square-edit text-secondary'></i>
+                                Signup
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                <i class='bx bxs-bell'></i>
+                Notifications
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="border border-1 p-3">
+                <strong>Liked Photo</strong>
+                Some people have liked your post uploaded
+            </p>
+            <p class="border border-1 p-3">
+                <strong>Get Order</strong>
+                Some people have placed an order on your store
+            </p>
+            <p class="border border-1 p-3">
+                <strong>Order Placed</strong>
+                Your order has been placed
+            </p>
+        </div>
+    </div>
+    <main class="container-fluid">
+        <aside class="border-end" id="aside">
+            <div class="content">
+                <h5>Categories</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Men's shirts
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Men's pants
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Men's shoes
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Men's jackets
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Men's coat
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Women's shirts
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Women's pants
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Women's shoes
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Women's jackets
+                    </a></li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            Women's coat
+                    </a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="content">
+            <div class="feature">
+                <img src="/static/images/cover2.jpg" alt="Cover Photo">
+                <div class="overlayer">
+                    <h1 class="shadow">You WADA Brand, Other What's a Brand</h1>
+                </div>
+            </div>
+            <h1 class="h1 my-3 text-center">Our Products</h1>
+            <section class="d-flex">
+    
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="/static/images/temp/blue-men-shirt.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Shirts</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-warning">See More</a>
+                    </div>
+                </div>
+    
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="/static/images/temp/Floral-Spring_Fall.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Floral Spring</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-warning">See More</a>
+                    </div>
+                </div>
+    
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="/static/images/temp/Men-Linen-Shirt-Shirt.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Linen Shirts</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-warning">See More</a>
+                    </div>
+                </div>
+    
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="/static/images/temp/Men-Polo-Shirt-Golf-Shirt.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Polo Shirts</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-warning">See More</a>
+                    </div>
+                </div>
+    
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="/static/images/temp/Women-Long-Sleeve.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's long Sleeve</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-warning">See More</a>
+                    </div>
+                </div>
+    
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="/static/images/temp/Women-Yellow-V-Neck.jpg" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's V-Neck Shirts</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-warning">See More</a>
+                    </div>
+                </div>
+    
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="d-flex justify-content-evenly">
+            <section>
+                <div class="navbar-brand">
+                    <img src="/static/logo.png" class="brand-logo" alt="logo">
+                    Brand
+                </div>
+                <p>
+                    Wearing And Dressing Administrating Brand | Make your brand WADA brand people will say "what's a brand!"
+                </p>
+            </section>
+            <section>
+                <h5>Members</h5>
+                <ul>
+                    <li><a class="nav-link" href="">Moeez Raza</a></li>
+                    <li><a class="nav-link" href="">Hafiz Ahsan Tahir</a></li>
+                    <li><a class="nav-link" href="">Muhammad Umar</a></li>
+                    <li><a class="nav-link" href="">Haroon Rajpoot</a></li>
+                    <li><a class="nav-link" href="">Rizwan Ali</a></li>
+                </ul>
+            </section>
+            <section>
+                <h5>Contact us</h5>
+                <ul>
+                    <li><a class="nav-link" href="">+92 300 1234567</a></li>
+                    <li><a class="nav-link" href="">+92 300 1234567</a></li>
+                    <li><a class="nav-link" href="">+92 300 1234567</a></li>
+                    <li><a class="nav-link" href="">+92 300 1234567</a></li>
+                    <li><a class="nav-link" href="">+92 300 1234567</a></li>
+                </ul>
+            </section>
+            <section>
+                <h5>Developer Team</h5>
+                <ul>
+                    <li><a class="nav-link" href="">Fiverr</a></li>
+                    <li><a class="nav-link" href="">Upwork</a></li>
+                    <li><a class="nav-link" href="">Mail</a></li>
+                    <li><a class="nav-link" href="">Join as developer</a></li>
+                </ul>
+            </section>
+        </div>
+        <hr class="m-3">
+        <div class="d-flex justify-content-center">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram-alt'></i></a>
+            <a href=""><i class='bx bxl-youtube'></i></a>
+            <a href=""><i class='bx bxl-linkedin-square'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-github'></i></a>
+        </div>
+    </footer>
+    <script src="/static/script.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

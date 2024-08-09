@@ -1,0 +1,27 @@
+header{
+    background-color: var(--bs-gray-100);
+}
+.navbar-brand{
+    color: var(--bs-gray-700);
+}
+.nav-link{
+    color: var(--bs-gray-600);
+}
+.nav-link.active{
+    color: var(--bs-blue) !important;
+}
+aside{
+    background-color: white;
+}
+aside .nav-link:hover{
+    background-color: var(--bs-gray-100);
+}
+.card a.brand_name{
+    color: var(--bs-gray-700);
+}
+footer{
+    background-color: var(--bs-gray-100);
+}
+footer div.d-flex > a{
+    color: var(--bs-gray-700);
+}
