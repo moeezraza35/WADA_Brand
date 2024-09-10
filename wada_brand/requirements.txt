@@ -1,4 +1,5 @@
-django
+django==4.1.13
 Pillow
-certifi
-wfastcgi
+mysqlclient
+django-cors-headers
+PyJwt

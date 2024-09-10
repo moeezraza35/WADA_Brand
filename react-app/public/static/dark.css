@@ -4,7 +4,7 @@ body{
 p{
     color: white;
 }
-h1, h5{
+h1, aside h5, footer h5{
     color: white !important;
 }
 .offcavas p{
@@ -39,6 +39,9 @@ aside .nav-link:hover{
 }
 .card a.brand_name{
     color: var(--bs-gray-400);
+}
+label{
+    color: white;
 }
 footer{
     background-color: var(--bs-dark);

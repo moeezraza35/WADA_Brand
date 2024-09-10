@@ -1,10 +1,10 @@
 export default function Footer(){
 	return (
-		<>
+		<footer>
 			<div className="d-flex justify-content-evenly">
 				<section>
 					<div className="navbar-brand">
-						<img src="./static/logo.png" className="brand-logo" alt="logo"/>
+						<img src="/static/logo.png" className="brand-logo" alt="logo"/>
 						Brand
 					</div>
 					<p>
@@ -50,6 +50,6 @@ export default function Footer(){
 				<a href=""><i className='bx bxl-twitter'></i></a>
 				<a href=""><i className='bx bxl-github'></i></a>
 			</div>
-		</>
+		</footer>
 	);
 }

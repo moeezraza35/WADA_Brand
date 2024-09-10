@@ -1,5 +1,6 @@
 export default function Aside(){
 	return (
+	<aside id="menu">
 		<div className="content">
 			<h5>Categories</h5>
 			<ul className="nav flex-column">
@@ -35,5 +36,6 @@ export default function Aside(){
 				</a></li>
 			</ul>
 		</div>
+	</aside>
 	);
 }
