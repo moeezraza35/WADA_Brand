@@ -25,6 +25,7 @@ yarn-error.log*
 venv/
 bootstrap/
 __pycache__/
+migrations/
 *.docx
 /*.jpg
 /*.HEIC
